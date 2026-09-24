@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* Educational, notebook-and-chalkboard palette — deliberately not the
+     cream+terracotta / near-black+neon defaults. */
+  --color-paper: #F6F3EC;
+  --color-ink: #20241F;
+  --color-chalk-green: #1F3A34;
+  --color-chalk-green-light: #2E5049;
+  --color-gold: #C89A3E;
+  --color-gold-light: #E4C275;
+  --color-line: #D8D2C2;
+
+  --font-display: 'Newsreader', serif;
+  --font-body: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
