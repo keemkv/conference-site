@@ -51,8 +51,9 @@ export default function Contacts() {
           className="border border-line bg-paper px-4 py-2.5 rounded-sm"
         />
         <input
+          required
           type="email"
-          placeholder="Email (необязательно)"
+          placeholder="Email (на него придёт доступ к сертификату)"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
           className="border border-line bg-paper px-4 py-2.5 rounded-sm"

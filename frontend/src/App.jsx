@@ -1,23 +1,14 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Program from './components/Program'
-import Speakers from './components/Speakers'
-import Payment from './components/Payment'
-import Contacts from './components/Contacts'
-import Footer from './components/Footer'
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import Certificate from "./pages/Certificate";
 
 export default function App() {
   return (
-    <div className="min-h-screen font-body">
-      <Header />
-      <main>
-        <Hero />
-        <Program />
-        <Speakers />
-        <Payment />
-        <Contacts />
-      </main>
-      <Footer />
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="/certificate" element={<Certificate />} />
+    </Routes>
+  );
 }

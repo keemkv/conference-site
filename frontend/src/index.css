@@ -1,23 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
 @theme {
   /* Educational, notebook-and-chalkboard palette — deliberately not the
      cream+terracotta / near-black+neon defaults. */
-  --color-paper: #F6F3EC;
-  --color-ink: #20241F;
-  --color-chalk-green: #1F3A34;
-  --color-chalk-green-light: #2E5049;
-  --color-gold: #C89A3E;
-  --color-gold-light: #E4C275;
-  --color-line: #D8D2C2;
+  --color-paper: #f6f3ec;
+  --color-ink: #20241f;
+  --color-chalk-green: #1f3a34;
+  --color-chalk-green-light: #2e5049;
+  --color-gold: #c89a3e;
+  --color-gold-light: #e4c275;
+  --color-line: #d8d2c2;
 
-  --font-display: 'Newsreader', serif;
-  --font-body: 'IBM Plex Sans', sans-serif;
+  --font-display: "Newsreader", serif;
+  --font-body: "IBM Plex Sans", sans-serif;
 }
 
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-body);
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 0;
+  }
+  body {
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 }
